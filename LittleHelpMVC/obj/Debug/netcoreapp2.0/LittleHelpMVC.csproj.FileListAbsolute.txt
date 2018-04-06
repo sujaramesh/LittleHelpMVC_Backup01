@@ -1,0 +1,55 @@
+C:\Users\cuties\lc101\Project\LittleHelpMVC\LittleHelpMVC\bin\Debug\netcoreapp2.0\LittleHelpMVC.deps.json
+C:\Users\cuties\lc101\Project\LittleHelpMVC\LittleHelpMVC\bin\Debug\netcoreapp2.0\LittleHelpMVC.runtimeconfig.json
+C:\Users\cuties\lc101\Project\LittleHelpMVC\LittleHelpMVC\bin\Debug\netcoreapp2.0\LittleHelpMVC.runtimeconfig.dev.json
+C:\Users\cuties\lc101\Project\LittleHelpMVC\LittleHelpMVC\bin\Debug\netcoreapp2.0\LittleHelpMVC.dll
+C:\Users\cuties\lc101\Project\LittleHelpMVC\LittleHelpMVC\bin\Debug\netcoreapp2.0\LittleHelpMVC.pdb
+C:\Users\cuties\lc101\Project\LittleHelpMVC\LittleHelpMVC\obj\Debug\netcoreapp2.0\LittleHelpMVC.csprojResolveAssemblyReference.cache
+C:\Users\cuties\lc101\Project\LittleHelpMVC\LittleHelpMVC\obj\Debug\netcoreapp2.0\LittleHelpMVC.csproj.CoreCompileInputs.cache
+C:\Users\cuties\lc101\Project\LittleHelpMVC\LittleHelpMVC\obj\Debug\netcoreapp2.0\LittleHelpMVC.AssemblyInfoInputs.cache
+C:\Users\cuties\lc101\Project\LittleHelpMVC\LittleHelpMVC\obj\Debug\netcoreapp2.0\LittleHelpMVC.AssemblyInfo.cs
+C:\Users\cuties\lc101\Project\LittleHelpMVC\LittleHelpMVC\obj\Debug\netcoreapp2.0\LittleHelpMVC.dll
+C:\Users\cuties\lc101\Project\LittleHelpMVC\LittleHelpMVC\obj\Debug\netcoreapp2.0\LittleHelpMVC.pdb
+C:\Users\cuties\lc101\Project\BKUP\LittleHelpMVC-2\LittleHelpMVC\bin\Debug\netcoreapp2.0\LittleHelpMVC.deps.json
+C:\Users\cuties\lc101\Project\BKUP\LittleHelpMVC-2\LittleHelpMVC\bin\Debug\netcoreapp2.0\LittleHelpMVC.runtimeconfig.json
+C:\Users\cuties\lc101\Project\BKUP\LittleHelpMVC-2\LittleHelpMVC\bin\Debug\netcoreapp2.0\LittleHelpMVC.runtimeconfig.dev.json
+C:\Users\cuties\lc101\Project\BKUP\LittleHelpMVC-2\LittleHelpMVC\bin\Debug\netcoreapp2.0\LittleHelpMVC.dll
+C:\Users\cuties\lc101\Project\BKUP\LittleHelpMVC-2\LittleHelpMVC\bin\Debug\netcoreapp2.0\LittleHelpMVC.pdb
+C:\Users\cuties\lc101\Project\BKUP\LittleHelpMVC-2\LittleHelpMVC\obj\Debug\netcoreapp2.0\LittleHelpMVC.csprojResolveAssemblyReference.cache
+C:\Users\cuties\lc101\Project\BKUP\LittleHelpMVC-2\LittleHelpMVC\obj\Debug\netcoreapp2.0\LittleHelpMVC.csproj.CoreCompileInputs.cache
+C:\Users\cuties\lc101\Project\BKUP\LittleHelpMVC-2\LittleHelpMVC\obj\Debug\netcoreapp2.0\LittleHelpMVC.AssemblyInfoInputs.cache
+C:\Users\cuties\lc101\Project\BKUP\LittleHelpMVC-2\LittleHelpMVC\obj\Debug\netcoreapp2.0\LittleHelpMVC.AssemblyInfo.cs
+C:\Users\cuties\lc101\Project\BKUP\LittleHelpMVC-2\LittleHelpMVC\obj\Debug\netcoreapp2.0\LittleHelpMVC.dll
+C:\Users\cuties\lc101\Project\BKUP\LittleHelpMVC-2\LittleHelpMVC\obj\Debug\netcoreapp2.0\LittleHelpMVC.pdb
+C:\Users\cuties\lc101\Project\LittleHelpMVC-latest\LittleHelpMVC\bin\Debug\netcoreapp2.0\LittleHelpMVC.deps.json
+C:\Users\cuties\lc101\Project\LittleHelpMVC-latest\LittleHelpMVC\bin\Debug\netcoreapp2.0\LittleHelpMVC.runtimeconfig.json
+C:\Users\cuties\lc101\Project\LittleHelpMVC-latest\LittleHelpMVC\bin\Debug\netcoreapp2.0\LittleHelpMVC.runtimeconfig.dev.json
+C:\Users\cuties\lc101\Project\LittleHelpMVC-latest\LittleHelpMVC\bin\Debug\netcoreapp2.0\LittleHelpMVC.dll
+C:\Users\cuties\lc101\Project\LittleHelpMVC-latest\LittleHelpMVC\bin\Debug\netcoreapp2.0\LittleHelpMVC.pdb
+C:\Users\cuties\lc101\Project\LittleHelpMVC-latest\LittleHelpMVC\obj\Debug\netcoreapp2.0\LittleHelpMVC.csprojResolveAssemblyReference.cache
+C:\Users\cuties\lc101\Project\LittleHelpMVC-latest\LittleHelpMVC\obj\Debug\netcoreapp2.0\LittleHelpMVC.csproj.CoreCompileInputs.cache
+C:\Users\cuties\lc101\Project\LittleHelpMVC-latest\LittleHelpMVC\obj\Debug\netcoreapp2.0\LittleHelpMVC.AssemblyInfoInputs.cache
+C:\Users\cuties\lc101\Project\LittleHelpMVC-latest\LittleHelpMVC\obj\Debug\netcoreapp2.0\LittleHelpMVC.AssemblyInfo.cs
+C:\Users\cuties\lc101\Project\LittleHelpMVC-latest\LittleHelpMVC\obj\Debug\netcoreapp2.0\LittleHelpMVC.dll
+C:\Users\cuties\lc101\Project\LittleHelpMVC-latest\LittleHelpMVC\obj\Debug\netcoreapp2.0\LittleHelpMVC.pdb
+C:\Users\cuties\lc101\Project\LittleHelpMVC-Edit\LittleHelpMVC\bin\Debug\netcoreapp2.0\LittleHelpMVC.deps.json
+C:\Users\cuties\lc101\Project\LittleHelpMVC-Edit\LittleHelpMVC\bin\Debug\netcoreapp2.0\LittleHelpMVC.runtimeconfig.json
+C:\Users\cuties\lc101\Project\LittleHelpMVC-Edit\LittleHelpMVC\bin\Debug\netcoreapp2.0\LittleHelpMVC.runtimeconfig.dev.json
+C:\Users\cuties\lc101\Project\LittleHelpMVC-Edit\LittleHelpMVC\bin\Debug\netcoreapp2.0\LittleHelpMVC.dll
+C:\Users\cuties\lc101\Project\LittleHelpMVC-Edit\LittleHelpMVC\bin\Debug\netcoreapp2.0\LittleHelpMVC.pdb
+C:\Users\cuties\lc101\Project\LittleHelpMVC-Edit\LittleHelpMVC\obj\Debug\netcoreapp2.0\LittleHelpMVC.csprojResolveAssemblyReference.cache
+C:\Users\cuties\lc101\Project\LittleHelpMVC-Edit\LittleHelpMVC\obj\Debug\netcoreapp2.0\LittleHelpMVC.csproj.CoreCompileInputs.cache
+C:\Users\cuties\lc101\Project\LittleHelpMVC-Edit\LittleHelpMVC\obj\Debug\netcoreapp2.0\LittleHelpMVC.AssemblyInfoInputs.cache
+C:\Users\cuties\lc101\Project\LittleHelpMVC-Edit\LittleHelpMVC\obj\Debug\netcoreapp2.0\LittleHelpMVC.AssemblyInfo.cs
+C:\Users\cuties\lc101\Project\LittleHelpMVC-Edit\LittleHelpMVC\obj\Debug\netcoreapp2.0\LittleHelpMVC.dll
+C:\Users\cuties\lc101\Project\LittleHelpMVC-Edit\LittleHelpMVC\obj\Debug\netcoreapp2.0\LittleHelpMVC.pdb
+C:\Users\cuties\lc101\Project\LittleHelpMVC-Edit - Copy\LittleHelpMVC\bin\Debug\netcoreapp2.0\LittleHelpMVC.deps.json
+C:\Users\cuties\lc101\Project\LittleHelpMVC-Edit - Copy\LittleHelpMVC\bin\Debug\netcoreapp2.0\LittleHelpMVC.runtimeconfig.json
+C:\Users\cuties\lc101\Project\LittleHelpMVC-Edit - Copy\LittleHelpMVC\bin\Debug\netcoreapp2.0\LittleHelpMVC.runtimeconfig.dev.json
+C:\Users\cuties\lc101\Project\LittleHelpMVC-Edit - Copy\LittleHelpMVC\bin\Debug\netcoreapp2.0\LittleHelpMVC.dll
+C:\Users\cuties\lc101\Project\LittleHelpMVC-Edit - Copy\LittleHelpMVC\bin\Debug\netcoreapp2.0\LittleHelpMVC.pdb
+C:\Users\cuties\lc101\Project\LittleHelpMVC-Edit - Copy\LittleHelpMVC\obj\Debug\netcoreapp2.0\LittleHelpMVC.csprojResolveAssemblyReference.cache
+C:\Users\cuties\lc101\Project\LittleHelpMVC-Edit - Copy\LittleHelpMVC\obj\Debug\netcoreapp2.0\LittleHelpMVC.csproj.CoreCompileInputs.cache
+C:\Users\cuties\lc101\Project\LittleHelpMVC-Edit - Copy\LittleHelpMVC\obj\Debug\netcoreapp2.0\LittleHelpMVC.AssemblyInfoInputs.cache
+C:\Users\cuties\lc101\Project\LittleHelpMVC-Edit - Copy\LittleHelpMVC\obj\Debug\netcoreapp2.0\LittleHelpMVC.AssemblyInfo.cs
+C:\Users\cuties\lc101\Project\LittleHelpMVC-Edit - Copy\LittleHelpMVC\obj\Debug\netcoreapp2.0\LittleHelpMVC.dll
+C:\Users\cuties\lc101\Project\LittleHelpMVC-Edit - Copy\LittleHelpMVC\obj\Debug\netcoreapp2.0\LittleHelpMVC.pdb

@@ -1,0 +1,9 @@
+﻿<h3>Remove an entry</h3>
+<form method="post">
+    @foreach (var help in ViewBag.helpers)
+    {
+        <input type="checkbox" name="helpIds" id="@help.HelpId " value="@help.HelpId" />
+        <label for="@help.HelpId">@help.Name</label><br/>
+    }
+    <input type="submit" value="Remove the entry" />
+</form>

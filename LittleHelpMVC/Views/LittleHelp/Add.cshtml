@@ -1,19 +1,28 @@
 ﻿@model LittleHelpMVC.ViewModels.AddHelpViewModel
-<h2>Add an entry</h2>
+<h3>Add your details</h3>
 <form asp-controller="LittleHelp" asp-action="Add" method="post">
+
     <div class="form-group">
         <label asp-for="Name"></label>
         <input class="form-control" asp-for="Name" />
         <span asp-validation-for="Name"></span>
     </div>
+
     <div class="form-group">
         <label asp-for="Contact"></label>
         <input class="form-control" asp-for="Contact" />
         <span asp-validation-for="Contact"></span>
     </div>
+
     <div class="form-group">
-        <label asp-for="Comment"></label>
-        <input class="form-control" asp-for="Comment" />
+        <label asp-for="Description"></label>
+        <input class="form-control" asp-for="Description" />
     </div>
+
+    <div class="form-group">
+        <label asp-for="CategoryID"></label>
+        <select asp-for="CategoryID" asp-items="Model.Categories"></select>
+    </div>
+
     <button>Add</button>
 </form>

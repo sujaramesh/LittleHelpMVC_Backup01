@@ -7,16 +7,13 @@ namespace LittleHelpMVC.Models
 {
     public class LittleHelp
     {
+        public int ID { get; set; }
         public string Name { get; set; }
         public string Contact { get; set; }
-        public int HelpId { get; set; }
-        public string Comment { get; set; }
-        public static int nextId = 1;
+        public string Description { get; set; }
 
-        public LittleHelp()
-        {
-            HelpId = nextId;
-            nextId++;
-        }
+        public int CategoryID { get; set; }
+        public HelpCategory Category { get; set; }
+
     }
 }

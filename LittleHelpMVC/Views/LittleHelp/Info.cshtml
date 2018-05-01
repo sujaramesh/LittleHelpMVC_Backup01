@@ -1,0 +1,27 @@
+﻿<h3>@ViewBag.Title</h3>
+
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Contact Info</th>
+        <th>Description</th>
+        <th>Category</th>
+        <th>Edit Entries</th>
+    </tr>
+    @foreach (var help in Model)
+
+    {
+        <tr>
+            <td>@help.Name</td>
+            <td>@help.Contact</td>
+            <td>@help.Description</td>
+            <td>@help.Category.Name</td>
+            <td><a asp-controller="Admin" asp-action="Edit" asp-route-helpid="@help.ID">Edit</a></td>
+        </tr>
+    }
+</table>
+
+@*<a asp-controller="LittleHelp" asp-action="Add">Add Entry</a><br />*@
+
+<div>@Html.ActionLink("Add","Add", "LittleHelp", new { name = ViewBag.name })</div>
+<a asp-controller="LittleHelp" asp-action="Index">Logout</a>

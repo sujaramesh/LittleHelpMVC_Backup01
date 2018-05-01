@@ -53,37 +53,38 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    
+
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" asp-area="" asp-controller="LittleHelp" asp-action="Index">
                             About<span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
                             <li><a asp-area="" asp-controller="LittleHelp" asp-action="About">Why LittleHelp</a></li>
-                            <li><a asp-area="" asp-controller="LittleHelp" asp-action="Contact">Contact US</a></li>
+                            <li><a asp-area="" asp-controller="LittleHelp" asp-action="Contact">Contact us</a></li>
                         </ul>
                     </li>
-             
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" asp-area="" asp-controller="LittleHelp" asp-action="Add">
-                            Services<span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a asp-area="" asp-controller="LittleHelp" asp-action="Index">Electrical</a></li>
-                            <li><a asp-area="" asp-controller="LittleHelp" asp-action="Index">Handyman</a></li>
-                            <li><a asp-area="" asp-controller="LittleHelp" asp-action="Index">Heating & A/C</a></li>
-                            <li><a asp-area="" asp-controller="LittleHelp" asp-action="Index">HouseCleaning</a></li>
-                            <li><a asp-area="" asp-controller="LittleHelp" asp-action="Index">Landscaping</a></li>
-                            <li><a asp-area="" asp-controller="LittleHelp" asp-action="Index">Lawnmower</a></li>
-                            <li><a asp-area="" asp-controller="LittleHelp" asp-action="Index">Plumbing</a></li>
-                            <li><a asp-area="" asp-controller="LittleHelp" asp-action="Index">Snowplower</a></li>
-                            <li><a asp-area="" asp-controller="LittleHelp" asp-action="Index">TreeService</a></li>
-                            <li><a asp-area="" asp-controller="LittleHelp" asp-action="Index">FutureUse</a></li>
-                       </ul>
-                    </li>
 
-                    <li><a asp-area="" asp-controller="LittleHelp" asp-action="Add">Service Providers</a></li>
-                    
+                    @*<li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" asp-area="" asp-controller="LittleHelp" asp-action="Add">
+                Services<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a asp-area="" asp-controller="Category" asp-action="Index">Electrical</a></li>
+                <li><a asp-area="" asp-controller="Category" asp-action="Index">Handyman</a></li>
+                <li><a asp-area="" asp-controller="Category" asp-action="Index">Heating & A/C</a></li>
+                <li><a asp-area="" asp-controller="Category" asp-action="Index">HouseCleaning</a></li>
+                <li><a asp-area="" asp-controller="Category" asp-action="Index">Landscaping</a></li>
+                <li><a asp-area="" asp-controller="Category" asp-action="Index">Lawnmower</a></li>
+                <li><a asp-area="" asp-controller="Category" asp-action="Index">Plumbing</a></li>
+                <li><a asp-area="" asp-controller="Category" asp-action="Index">Snowplower</a></li>
+                <li><a asp-area="" asp-controller="Category" asp-action="Index">TreeService</a></li>
+                <li><a asp-area="" asp-controller="Category" asp-action="Index">FutureUse</a></li>
+           </ul>
+        </li>*@
+                    <li><a asp-area="" asp-controller="Category" asp-action="Index">Services</a></li>
+                    <li><a asp-area="" asp-controller="User" asp-action="Index">Service Providers</a></li>
+                    <li><a asp-area="" asp-controller="User" asp-action="Admin">Admin</a></li>
+
                     @*<li><a asp-area="" asp-controller="LittleHelp" asp-action="Edit">Edit</a> </li>*@
                 </ul>
             </div>

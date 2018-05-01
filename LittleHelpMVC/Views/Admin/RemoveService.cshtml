@@ -1,0 +1,9 @@
+﻿<h3>Remove an entry</h3>
+<form method="post">
+    @foreach (var category in ViewBag.categories)
+    {
+        <input type="checkbox" name="catIds" id="@category.CategoryID " value="@category.CategoryID" />
+        <label for="@category.CategoryID">@category.Name</label><br />
+    }
+    <input type="submit" value="Remove the entry" />
+</form>

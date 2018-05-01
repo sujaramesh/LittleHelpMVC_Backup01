@@ -1,0 +1,12 @@
+﻿@model List<LittleHelpMVC.Models.HelpCategory>
+
+<h3>Services we provide</h3>
+
+@foreach (var category in Model)
+{
+    <ul>
+        <a asp-controller="LittleHelp"
+           asp-action="Category"
+           asp-route-id="@category.ID">@category.Name</a>
+    </ul>
+}

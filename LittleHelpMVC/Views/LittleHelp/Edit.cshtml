@@ -11,10 +11,11 @@
         <input class="form-control" asp-for="Contact" />
     </div>
     <div class="form-group">
-        <label asp-for="Comment"></label>
-        <input class="form-control" asp-for="Comment" />
+        <label asp-for="Description"></label>
+        <input class="form-control" asp-for="Description" />
     </div>
     <input type="hidden" asp-for="HelpId" />
     <button>Add</button>
-    
+
 </form>
+<p><a asp-controller="LittleHelp" asp-action="Index">Logout</a></p>

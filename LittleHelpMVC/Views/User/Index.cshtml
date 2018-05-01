@@ -1,0 +1,22 @@
+﻿<h3>Welcome LittleHelpers!</h3>
+@*<table class="table">
+    <tr>
+        <th>Name</th>
+    </tr>
+    @foreach (var user in Model)
+
+    {
+        <tr>
+            <td>@user.Username</td>
+        </tr>
+    }
+</table>*@
+
+<p>
+    <div>
+        <ul>
+            <li><a asp-area="" asp-controller="User" asp-action="SignIn">Existing Helper</a></li>
+            <li><a asp-area="" asp-controller="User" asp-action="Add">New Helper</a></li>
+        </ul>
+    </div>
+</p>

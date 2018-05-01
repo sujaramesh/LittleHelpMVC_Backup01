@@ -1,28 +1,26 @@
 ﻿<h2>@ViewBag.Title</h2>
 
-@if (ViewBag.helpers.Count == 0)
-{
-    <h3>No entries yet!!!</h3>
-}
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Contact Info</th>
+        <th>Description</th>
+        <th>Category</th>
+        <th>Edit Entries</th>
+    </tr>
+    @foreach (var help in Model)
 
-    <table class="table">
+    {
         <tr>
-            <th>Name</th>
-            <th>Contact Info</th>
-            <th>Comment</th>
-            <th>Edit Entries</th>
+            <td>@help.Name</td>
+            <td>@help.Contact</td>
+            <td>@help.Description</td>
+            <td>@help.Category.Name</td>
+            <td><a asp-controller="LittleHelp" asp-action="Edit" asp-route-helpid="@help.ID">Edit</a></td>
         </tr>
-        @foreach (var help in ViewBag.helpers)
-
-        {
-            <tr>
-                <td>@help.Name</td>
-                <td>@help.Contact</td>
-                <td>@help.Comment</td>
-                <td><a asp-controller="LittleHelp" asp-action="Edit" asp-route-helpid="@help.HelpId">Edit</a></td>
-            </tr>
-        }
-    </table>
+    }
+</table>
 
 <a asp-controller="LittleHelp" asp-action="Add">Add Entries</a><br />
 <a asp-controller="LittleHelp" asp-action="Remove">Remove Entries</a><br />
+<p><a asp-controller="LittleHelp" asp-action="Index">Logout</a></p>

@@ -1,0 +1,29 @@
+﻿@model LittleHelpMVC.ViewModels.SignInViewModel
+
+<h4>@ViewBag.Title</h4>
+<br />
+<form method="post">
+
+    <div class="form-group">
+        <label asp-for="Username"></label>
+        <input class="form-control" asp-for="Username" />
+        <span asp-validation-for="Username"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Password"></label>
+        <input class="form-control" asp-for="Password" type="password" />
+        <span asp-validation-for="Password"></span>
+    </div>
+
+    <input type="hidden" name="UserId" value="@Model.UserId" />
+
+    <input type="submit" value="Login" />
+
+    @*   <button title="Contact Admin">Forgot Password</button> *@
+    <button type="button" onclick="alert('Contact Admin!')">Forgot Password</button>
+
+</form>
+
+<br />
+<a asp-controller="User" asp-action="Add">New Helpers, Register here</a>

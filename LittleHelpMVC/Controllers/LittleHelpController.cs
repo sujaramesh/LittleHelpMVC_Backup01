@@ -24,8 +24,6 @@ namespace LittleHelpMVC.Controllers
         //GET: /<controller>/
         public IActionResult Index()
         {
-            //List<LittleHelp> helpers = context.Helpers.Include(c => c.Category).ToList();
-            //ViewBag.Title = "Little Help";
             return View();
         }
 
@@ -40,7 +38,7 @@ namespace LittleHelpMVC.Controllers
         }
 
         [HttpGet]
-        public IActionResult Add(string name)
+        public IActionResult Add(string name, string scrname)
         {
             AddHelpViewModel addHelpViewModel = new AddHelpViewModel(context.Categories.ToList());
             ViewBag.Title = name;
@@ -48,7 +46,7 @@ namespace LittleHelpMVC.Controllers
         }
 
         [HttpPost]
-        public IActionResult Add(AddHelpViewModel addHelpViewModel)
+        public IActionResult Add(AddHelpViewModel addHelpViewModel, string usrname)
         {
             if (ModelState.IsValid)
             {
@@ -66,7 +64,7 @@ namespace LittleHelpMVC.Controllers
                 context.Helpers.Add(helper);
                 context.SaveChanges();
                 ViewBag.name = addHelpViewModel.Name;
-                return RedirectToAction("Info","LittleHelp",new { name = addHelpViewModel.Name });
+                return RedirectToAction("Info", "LittleHelp", new { name = addHelpViewModel.Name });
             }
 
             return View(addHelpViewModel);
@@ -82,52 +80,29 @@ namespace LittleHelpMVC.Controllers
             HelpCategory theCategory = context.Categories.Include(cat => cat.Helpers).Single(cat => cat.ID == id);
             ViewBag.Title = theCategory.Name;
 
-            return View("Category", theCategory.Helpers);
+            return View(theCategory.Helpers);
         }
-
-
-        //public IActionResult Remove()
-        //{
-        //    ViewBag.helpers = context.Helpers.ToList();
-        //    return View();
-        //}
-
-        //[HttpPost]
-        //public IActionResult Remove(int[] helpIds)
-        //{
-        //    foreach (int helpId in helpIds)
-        //    {
-        //        LittleHelp theHelper = context.Helpers.Single(c => c.ID == helpId);
-
-        //        context.Helpers.Remove(theHelper);
-        //    }
-        //    context.SaveChanges();
-        //    return Redirect("/");
-        //}
 
         public IActionResult Info(string name)
         {
-            List<LittleHelp> helpers = context.Helpers.Where(c =>  c.Name == name)
+            List<LittleHelp> helpers = context.Helpers.Where(c => c.Name == name)
                                .Include(c => c.Category).ToList();
             ViewBag.Name = name;
             ViewBag.Title = name + " entries";
 
-            return View("Info",helpers);
+            return View(helpers);
         }
 
-        public IActionResult Edit(string name)
+        public IActionResult Edit(int id)
         {
             AddEditHelpViewModel addEditHelpViewModel = new AddEditHelpViewModel();
 
-            List<LittleHelp> helpers = context.Helpers.Where(c => c.Name == name)
-                                          .Include(c => c.Category).ToList();
-            foreach (var helper in helpers)
-            {
-                addEditHelpViewModel.Name = helper.Name;
-                addEditHelpViewModel.Contact = helper.Contact;
-                //    addEditHelpViewModel.HelpId = helpData.HelpId;
-                addEditHelpViewModel.Description = helper.Description;
-            }
+            LittleHelp helper = context.Helpers.SingleOrDefault(c => c.ID == id);
+
+            addEditHelpViewModel.Name = helper.Name;
+            addEditHelpViewModel.Contact = helper.Contact;
+            addEditHelpViewModel.Description = helper.Description;
+            ViewBag.helpId = id;
             return View(addEditHelpViewModel);
         }
 
@@ -135,13 +110,13 @@ namespace LittleHelpMVC.Controllers
         public IActionResult Edit(AddEditHelpViewModel addEditHelpViewModel)
         {
 
-            LittleHelp helpData = context.Helpers.Single(c => c.ID == addEditHelpViewModel.HelpId);
-            helpData.Name = addEditHelpViewModel.Name;
+            LittleHelp helpData = context.Helpers.FirstOrDefault(c => c.ID == addEditHelpViewModel.HelpId);
             helpData.Contact = addEditHelpViewModel.Contact;
             helpData.Description = addEditHelpViewModel.Description;
 
             context.SaveChanges();
-            return Redirect("/");
+            return RedirectToAction("Info", "LittleHelp", new { name = addEditHelpViewModel.Name });
+
         }
     }
 }

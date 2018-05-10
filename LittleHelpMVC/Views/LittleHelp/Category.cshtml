@@ -5,18 +5,15 @@
         <th>Name</th>
         <th>Contact Info</th>
         <th>Description</th>
-        @* <th>Review</th> *@
-
     </tr>
     @foreach (var help in Model)
 
     {
-    <tr>
-        <td>@help.Name</td>
-        <td>@help.Contact</td>
-        <td>@help.Description</td>
-     @*   <td>@help.Category.Name</td> *@
-    </tr>
+        <tr>
+            <td>@help.Name</td>
+            <td>@help.Contact</td>
+            <td>@help.Description</td>
+        </tr>
     }
 </table>
-<p><a asp-controller="LittleHelp" asp-action="Index">Logout</a></p>
+@*<p><a asp-controller="LittleHelp" asp-action="Index">Logout</a></p>*@

@@ -22,8 +22,6 @@ namespace LittleHelpMVC.Controllers
 
         public IActionResult Index()
         {
-            //   List<User> users = context.Users.ToList();
-            //   return View(users);
             return View();
         }
 
@@ -31,24 +29,44 @@ namespace LittleHelpMVC.Controllers
         public IActionResult Add()
         {
             AddUserViewModel addUserViewModel = new AddUserViewModel();
+            ViewBag.Title = "New Helpers, Register here";
             return View(addUserViewModel);
         }
 
         [HttpPost]
         public IActionResult Add(AddUserViewModel addUserViewModel)
         {
+            //List<User> users = context.Users
+            //    .Where(c => (c.Username == addUserViewModel.Username)).ToList();
+
+            User user = context.Users.FirstOrDefault(c => (c.Username == addUserViewModel.Username));
+
+            if (user != null)
+            {
+                ViewBag.Title = "A Serice Provider already exits with this name !!!";
+                return View(addUserViewModel);
+            }
+
+            User userEmail = context.Users.FirstOrDefault(c => (c.Email == addUserViewModel.Email));
+
+            if (userEmail != null)
+            {
+                ViewBag.Title = "A Serice Provider already exists with this email address !!!";
+                return View(addUserViewModel);
+            }
             if (ModelState.IsValid)
             {
                 User newUser = new User
                 {
                     Username = addUserViewModel.Username,
+                    Screenname = addUserViewModel.Screenname,
                     Email = addUserViewModel.Email,
                     Password = addUserViewModel.Password
                 };
                 context.Users.Add(newUser);
                 context.SaveChanges();
 
-                return RedirectToAction("Add", "LittleHelp",new { name=newUser.Username});
+                return RedirectToAction("Add", "LittleHelp",new { name=newUser.Username,scrname=newUser.Screenname});
             }
 
             return View(addUserViewModel);
@@ -66,30 +84,31 @@ namespace LittleHelpMVC.Controllers
         [HttpPost]
         public IActionResult SignIn(SignInViewModel signInViewModel)
         {
-            List<User> users = context.Users
-                .Where(c => (c.Username == signInViewModel.Username) && (c.ID == signInViewModel.UserId)).ToList();
+            List<User> users = context.Users.Where(c => (c.Username == signInViewModel.Username)).ToList();
+
             if (users.Count == 0)
             {
-                ViewBag.Title = "Check the name you entered";
+                ViewBag.Title = "No Service Provider, Check the name you entered";
                 return View(signInViewModel);
             }
             else
             {
                 foreach (var user in users)
                 {
-                    if (signInViewModel.Password != user.Username)
+                    if (user.Password != signInViewModel.Password)
                     {
                         ViewBag.Title = "Wrong Password";
                         return View(signInViewModel);
                     }
 
-                    if (signInViewModel.Username != user.Username)
+                    if (user.Username != signInViewModel.Username)
                     {
                         ViewBag.Title = "Check the name you entered";
                         return View(signInViewModel);
                     }
                 }
             }
+
             if (ModelState.IsValid)
             {
                 List<LittleHelp> helpers = context.Helpers
@@ -97,10 +116,9 @@ namespace LittleHelpMVC.Controllers
                           .Include(c => c.Category).ToList();
 
                 return RedirectToAction("Info", "LittleHelp", new { name = signInViewModel.Username });
-                //return RedirectToAction("Info", "LittleHelp", new { name = signInViewModel.Username, id = signInViewModel.UserId });
-                //return View(helpers);
             }
             return View(signInViewModel);
+
         }
 
         [HttpGet]
@@ -114,23 +132,20 @@ namespace LittleHelpMVC.Controllers
         [HttpPost]
         public IActionResult Admin(SignInViewModel signInViewModel)
         {
-            List<User> users = context.Users.Where(c => c.Username == "Admin").ToList();
-            foreach (var user in users)
+            User user = context.Users.FirstOrDefault(c => c.Username == "Admin");
+
+            if (signInViewModel.Username != "Admin")
             {
-                if (signInViewModel.Username != "Admin")
-                {
-                    ViewBag.Title = "Check the name you entered";
-                    return View(signInViewModel);
-                }
-
-                if (signInViewModel.Password != user.Password) 
-                {
-                    ViewBag.Title = "Wrong Password";
-                    return View(signInViewModel);
-                }
-
-                return RedirectToAction("Index", "Admin");
+                ViewBag.Title = "Check the name you entered";
+                return View(signInViewModel);
             }
+
+            if (signInViewModel.Password != "littlehelp")
+            {
+                ViewBag.Title = "Wrong Password";
+                return View(signInViewModel);
+            }
+
             return RedirectToAction("Index", "Admin");
         }
     }

@@ -29,26 +29,6 @@ namespace LittleHelpMVC.Controllers
             return View(helpers);
         }
 
-        //public IActionResult Help()
-        //{
-        //    List<LittleHelp> helpers = context.Helpers.ToList();
-        //    ViewBag.Title = "Little Help";
-        //    return View(helpers);
-        //}
-         
-        //public IActionResult Category(int id)
-        //{
-        //    if (id == 0)
-        //    {
-        //        return Redirect("/Category");
-        //    }
-
-        //    HelpCategory theCategory = context.Categories.Include(c => c.Helpers).Single(c => c.ID == id);
-        //    ViewBag.Title = "Service Provider " + theCategory.Name;
-        //    return View("Index", theCategory.Helpers);
-        //}
-
-
         public IActionResult Remove()
         {
             ViewBag.helpers = context.Helpers.Include(c => c.Category).ToList();
@@ -65,57 +45,34 @@ namespace LittleHelpMVC.Controllers
                 context.Helpers.Remove(theHelper);
             }
             context.SaveChanges();
-            return RedirectToAction("Index","Admin");
+            return RedirectToAction("Index", "Admin");
         }
 
-        public IActionResult Edit(int helpId)
+        public IActionResult Edit(int Id)
         {
-            AddEditHelpViewModel addEditHelpViewModel = new AddEditHelpViewModel();
+            ResetViewModel resetViewModel = new ResetViewModel();
 
-            LittleHelp helpData = context.Helpers.Single(c => c.ID == helpId);
-            addEditHelpViewModel.Name = helpData.Name;
-            addEditHelpViewModel.Contact = helpData.Contact;
-            //    addEditHelpViewModel.HelpId = helpData.HelpId;
-            addEditHelpViewModel.Description = helpData.Description;
-            ViewBag.Title = "Edit Entry";
-            return View(addEditHelpViewModel);
+            User userData = context.Users.FirstOrDefault(c => c.ID == Id);
+            //           resetViewModel.Password = userData.Password;
+            ViewBag.Title = "Reset Password" + Id;
+            ViewBag.LoginId = Id;
+            return View(resetViewModel);
         }
 
         [HttpPost]
-        public IActionResult Edit(AddEditHelpViewModel addEditHelpViewModel)
+        public IActionResult Edit(ResetViewModel resetViewModel)
         {
+            User user = context.Users.FirstOrDefault(c => c.ID == resetViewModel.UserId);
 
-            LittleHelp helpData = context.Helpers.Single(c => c.ID == addEditHelpViewModel.HelpId);
-            helpData.Name = addEditHelpViewModel.Name;
-            helpData.Contact = addEditHelpViewModel.Contact;
-            helpData.Description = addEditHelpViewModel.Description;
-
-            context.SaveChanges();
-            //   return Redirect("/"); 
-         //   ViewBag.Title = "Your details has been updated!!!";
-            return RedirectToAction("Info", "LittleHelp", new { name = addEditHelpViewModel.Name }); 
-            //   return View(addEditHelpViewModel);
-            //   return View("Welcome", ViewBag.name = addEditHelpViewModel.Name);
+            if (ModelState.IsValid)
+            {
+                user.Password = resetViewModel.Password;
+                context.SaveChanges();
+                ViewBag.Title = "Password changed";
+                return View("Welcome");
+            }
+            ViewBag.Title = "Reset Password failed";
+            return View(resetViewModel);
         }
-
-        //public IActionResult RemoveService()
-        //{
-        //    ViewBag.categories = context.Categories.ToList();
-        //    return View();
-        //}
-
-        //[HttpPost]
-        //public IActionResult RemoveService(int[] catIds)
-        //{
-        //    foreach (int catId in catIds)
-        //    {
-        //        HelpCategory theCategory = context.Categories.Single(c => c.ID == catId);
-
-        //        context.Categories.Remove(theCategory);
-        //    }
-        //    context.SaveChanges();
-        //    return Redirect("/");
-        //}
-
     }
 }

@@ -6,7 +6,7 @@
         <th>Contact Info</th>
         <th>Description</th>
         <th>Category</th>
-        <th>Edit Entries</th>
+        <th>Reset Password</th>
     </tr>
     @foreach (var help in Model)
 
@@ -16,7 +16,7 @@
             <td>@help.Contact</td>
             <td>@help.Description</td>
             <td>@help.Category.Name</td>
-            <td><a asp-controller="Admin" asp-action="Edit" asp-route-helpid="@help.ID">Edit</a></td>
+            <td><a asp-controller="Admin" asp-action="Edit" asp-route-id="@help.ID">Change</a></td>
         </tr>
     }
 </table>

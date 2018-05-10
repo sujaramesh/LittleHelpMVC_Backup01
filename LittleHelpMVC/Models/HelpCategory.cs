@@ -12,17 +12,4 @@ namespace LittleHelpMVC.Models
 
         public List<LittleHelp> Helpers { get; set; }
     }
-
-    //public enum HelpCategory
-    //{
-    //    Electrical,
-    //    Handyman,
-    //    HeatingAndAC,
-    //    HouseCleaning,
-    //    Landscaping, 
-    //    Lawnmower,
-    //    Plumbing,
-    //    Snowplower,
-    //    TreeService
-    //}
 }

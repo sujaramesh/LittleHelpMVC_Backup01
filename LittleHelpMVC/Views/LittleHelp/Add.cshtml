@@ -1,10 +1,10 @@
 ﻿@model LittleHelpMVC.ViewModels.AddHelpViewModel
-<h3>Add your details</h3>
+<h3>@ViewBag.Title, Add your details</h3>
 <form asp-controller="LittleHelp" asp-action="Add" method="post">
 
     <div class="form-group">
         <label asp-for="Name"></label>
-        <input class="form-control" asp-for="Name" />
+        <input class="form-control" asp-for="Name" readonly="readonly" />
         <span asp-validation-for="Name"></span>
     </div>
 
